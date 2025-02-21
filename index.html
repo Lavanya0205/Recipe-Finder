@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <h1>Welcome to Recipe Finder</h1>
+            <p>Discover delicious recipes from around the world!</p>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Find Your Perfect Recipe</h2>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search for recipes...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <button id="random-recipe-btn">Get Random Recipe</button>
+        </div>
+        <div class="food-animation">
+            <div class="food-item pizza"></div>
+            <div class="food-item burger"></div>
+            <div class="food-item sushi"></div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters">
+        <h2>Filters</h2>
+        <div class="filter-options">
+            <select id="cuisine-filter">
+                <option value="">All Cuisines</option>
+                <option value="Italian">Italian</option>
+                <option value="Indian">Indian</option>
+                <option value="Chinese">Chinese</option>
+                <option value="Mexican">Mexican</option>
+            </select>
+            <select id="diet-filter">
+                <option value="">All Diets</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="vegan">Vegan</option>
+                <option value="gluten-free">Gluten-Free</option>
+                <option value="keto">Keto</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Ingredients Search Section -->
+    <section class="ingredients-search">
+        <h2>Find Recipes by Ingredients</h2>
+        <div class="ingredients-input">
+            <input type="text" id="ingredients-input" placeholder="Enter ingredients (e.g., tomato, onion, chicken)">
+            <button id="ingredients-search-btn"><i class="fas fa-search"></i> Search</button>
+        </div>
+        <div id="ingredients-recipe-list" class="recipe-list"></div>
+    </section>
+
+    <!-- Recipe List Section -->
+    <section class="recipe-list-section">
+        <h2>Recipes</h2>
+        <div id="recipe-list" class="recipe-list"></div>
+    </section>
+
+    <!-- Shopping List Section -->
+    <section class="shopping-list">
+        <h2>Shopping List</h2>
+        <ul id="shopping-list-items"></ul>
+        <button id="clear-shopping-list">Clear List</button>
+    </section>
+
+    <!-- Cooking Timer Section -->
+    <section class="cooking-timer">
+        <h2>Cooking Timer</h2>
+        <div class="timer-display">00:00:00</div>
+        <div class="timer-controls">
+            <button id="start-timer">Start</button>
+            <button id="stop-timer">Stop</button>
+            <button id="reset-timer">Reset</button>
+        </div>
+    </section>
+
+    <section>class="new-features">
+        <h2>Explore More Features</h2>
+        <div class="new-features-grid">
+            <div class="new-feature-card">
+                <i class="fas fa-clock"></i>
+                <h3>Meal Planner</h3>
+                <p>Plan your meals for the week with our meal planner.</p>
+            </div>
+            <div class="new-feature-card">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Shopping List</h3>
+                <p>Generate a shopping list for your recipes.</p>
+            </div>
+            <div class="new-feature-card">
+                <i class="fas fa-fire"></i>
+                <h3>Calorie Tracker</h3>
+                <p>Track the calories of your meals.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Recipe Finder. All rights reserved.</p>
+    </footer>
+
+    <!-- Recipe Modal -->
+    <div id="recipe-modal" style="display: none;">
+        <div id="modal-content">
+            <span id="close-modal">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-instructions"></p>
+            <h3>Ingredients</h3>
+            <ul id="modal-ingredients"></ul>
+            <button id="add-to-shopping-list">Add to Shopping List</button>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" style="display: none;">Loading...</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
