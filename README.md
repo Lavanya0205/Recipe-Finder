@@ -17,3 +17,10 @@ Calorie Tracker: View calorie information for each recipe.
 Cooking Timer: Stay on track with a built-in cooking timer.
 
 Dark Mode: Switch between light and dark themes for better usability.
+
+Technologies Used
+Frontend: HTML, CSS, JavaScript
+
+API: Spoonacular API
+
+Animations: CSS Keyframes
